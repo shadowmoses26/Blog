@@ -13,7 +13,7 @@
 <body>
 
 <% if user_signed_in? %>
-  Hello, <%=current_user.email %> | <%= link_to 'Sing out', destroy_user_session_path, data: { 'turbo-method': :delete} %>
+  Hello, <%=current_user.username %> | <%= link_to 'Sing out', destroy_user_session_path, data: { 'turbo-method': :delete} %>
 <% else %>
   <%= link_to 'Sing in', new_user_session_path %>
 <% end %>
